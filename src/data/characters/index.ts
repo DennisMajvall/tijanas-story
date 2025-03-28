@@ -6,5 +6,5 @@ import { gardener } from './gardener';
 export const characters: Record<string, Character> = {
   narrator,
   librarian,
-  gardener
+  gardener,
 } as const;

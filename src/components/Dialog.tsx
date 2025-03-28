@@ -8,7 +8,12 @@ interface DialogProps {
   onClose: () => void;
 }
 
-export function Dialog({ character, currentDialog, onChoice, onClose }: DialogProps) {
+export function Dialog({
+  character,
+  currentDialog,
+  onChoice,
+  onClose,
+}: DialogProps) {
   const dialog = character.dialogues[currentDialog];
 
   return (
@@ -23,7 +28,7 @@ export function Dialog({ character, currentDialog, onChoice, onClose }: DialogPr
           <div className="flex-1">
             <h3 className="text-xl font-bold mb-2">{character.name}</h3>
             <p className="text-lg mb-4">{dialog.text}</p>
-            
+
             <div className="space-y-2">
               {dialog.options?.map((option, index) => (
                 <button

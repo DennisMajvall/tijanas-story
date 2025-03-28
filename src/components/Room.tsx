@@ -9,7 +9,7 @@ interface RoomProps {
 
 export function Room({ room, onMove, onInteract }: RoomProps) {
   return (
-    <div 
+    <div
       className="relative min-h-screen w-full bg-cover bg-center transition-all duration-1000"
       style={{ backgroundImage: `url(${room.background})` }}
     >
@@ -18,7 +18,7 @@ export function Room({ room, onMove, onInteract }: RoomProps) {
           <div className="max-w-2xl mx-auto bg-black bg-opacity-75 text-white p-6 rounded-lg backdrop-blur-sm">
             <h1 className="text-3xl font-bold mb-4">{room.name}</h1>
             <p className="text-lg mb-6">{room.description}</p>
-            
+
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 {Object.entries(room.exits).map(([direction, _]) => (
@@ -31,10 +31,12 @@ export function Room({ room, onMove, onInteract }: RoomProps) {
                   </button>
                 ))}
               </div>
-              
+
               {room.characters && (
                 <div className="mt-6">
-                  <h2 className="text-xl font-semibold mb-3">Characters present:</h2>
+                  <h2 className="text-xl font-semibold mb-3">
+                    Characters present:
+                  </h2>
                   <div className="grid grid-cols-2 gap-4">
                     {room.characters.map((characterId) => (
                       <button
