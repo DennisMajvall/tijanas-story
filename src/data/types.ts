@@ -5,6 +5,7 @@ export interface Room {
   background: string;
   exits: { [key: string]: string };
   characters?: string[];
+  introCharacter?: string;
   items?: string[];
 }
 

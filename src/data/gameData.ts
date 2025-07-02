@@ -5,5 +5,5 @@ export * from './types';
 
 export const gameData = {
   rooms,
-  characters,
+  characters
 } as const;

@@ -1,10 +1,10 @@
 import { Character } from '../types';
-import { narrator } from './narrator';
+import { mainMenuDennis } from './main-menu-dennis';
 import { librarian } from './librarian';
 import { gardener } from './gardener';
 
 export const characters: Record<string, Character> = {
-  narrator,
+  mainMenuDennis,
   librarian,
-  gardener,
+  gardener
 } as const;

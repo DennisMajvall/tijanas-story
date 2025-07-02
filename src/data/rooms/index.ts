@@ -46,5 +46,5 @@ export const rooms: Record<string, Room> = {
   bikingBelgrade1hr,
   valentineCryGiftTradition,
   looksFakePhotoshop,
-  pinkWigEtc,
+  pinkWigEtc
 } as const;

@@ -8,12 +8,7 @@ interface DialogProps {
   onClose: () => void;
 }
 
-export function Dialog({
-  character,
-  currentDialog,
-  onChoice,
-  onClose,
-}: DialogProps) {
+export function Dialog({ character, currentDialog, onChoice, onClose }: DialogProps) {
   const dialog = character.dialogues[currentDialog];
 
   return (
@@ -27,8 +22,8 @@ export function Dialog({
           />
           <div className="flex-1">
             <h3 className="text-xl font-bold mb-2">{character.name}</h3>
-            <p className="text-lg mb-4">{dialog.text}</p>
-
+            <p className="text-lg mb-4 whitespace-pre-line">{dialog.text}</p>
+            
             <div className="space-y-2">
               {dialog.options?.map((option, index) => (
                 <button
@@ -41,7 +36,7 @@ export function Dialog({
               ))}
               <button
                 onClick={onClose}
-                className="block w-full text-left bg-red-600 hover:bg-red-700 px-4 py-2 rounded transition-colors duration-200"
+                className="block w-full text-left bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded transition-colors duration-200"
               >
                 End conversation
               </button>
