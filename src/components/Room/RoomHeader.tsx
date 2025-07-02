@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface RoomHeaderProps {
   name: string;
   description: string;
@@ -8,8 +6,8 @@ interface RoomHeaderProps {
 export function RoomHeader({ name, description }: RoomHeaderProps) {
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-4">{name}</h1>
-      <p className="text-lg mb-6">{description}</p>
+      <h1 className="mb-4 text-3xl font-bold">{name}</h1>
+      <p className="mb-6 text-lg">{description}</p>
     </div>
   );
 }

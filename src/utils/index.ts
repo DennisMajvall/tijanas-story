@@ -1,2 +1,2 @@
-
-export const roomIdWithCharacterId = (roomId: string, characterId?: string) => characterId ? `${roomId}:${characterId}` : '';
+export const roomIdWithCharacterId = (roomId: string, characterId?: string) =>
+  characterId ? `${roomId}:${characterId}` : '';

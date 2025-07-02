@@ -5,7 +5,7 @@ export function useGameNavigation() {
   // Get initial room from URL or default to mainMenu
   const getInitialRoom = () => {
     const pathname = window.location.pathname.substring(1); // Remove leading slash
-    return pathname && gameData.rooms[pathname] 
+    return pathname && gameData.rooms[pathname]
       ? gameData.rooms[pathname]
       : gameData.rooms.mainMenu;
   };
@@ -41,6 +41,6 @@ export function useGameNavigation() {
 
   return {
     currentRoom,
-    navigateToRoom
+    navigateToRoom,
   };
 }

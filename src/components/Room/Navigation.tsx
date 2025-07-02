@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface NavigationProps {
   exits: { [key: string]: string };
   onMove: (direction: string) => void;
@@ -7,23 +5,28 @@ interface NavigationProps {
   hasBackButton: boolean;
 }
 
-export function Navigation({ exits, onMove, canContinue, hasBackButton = true }: NavigationProps) {
+export function Navigation({
+  exits,
+  onMove,
+  canContinue,
+  hasBackButton = true,
+}: NavigationProps) {
   return (
-    <div className="flex gap-4 justify-between">
-      {hasBackButton && 
-      <button
-        onClick={() => window.history.back()}
-        className="opacity-50 bg-rose-800 hover:bg-rose-950 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-      >
-        Go back
-      </button>
-      }
-      {Object.entries(exits).map(([direction, _]) => (
+    <div className="flex justify-between gap-4">
+      {hasBackButton && (
+        <button
+          onClick={() => window.history.back()}
+          className="px-4 py-2 text-white transition-colors duration-200 rounded-lg opacity-50 bg-rose-800 hover:bg-rose-950"
+        >
+          Go back
+        </button>
+      )}
+      {Object.keys(exits).map((direction) => (
         <button
           key={direction}
           disabled={!canContinue}
           onClick={() => canContinue && onMove(direction)}
-          className="bg-indigo-600 hover:bg-indigo-700 grow text-white px-4 py-2 rounded-lg transition-colors duration-200 disabled:bg-indigo-900 disabled:cursor-not-allowed"
+          className="px-4 py-2 text-white transition-colors duration-200 bg-indigo-600 rounded-lg hover:bg-indigo-700 grow disabled:bg-indigo-900 disabled:cursor-not-allowed"
         >
           Go {direction}
         </button>

@@ -1,7 +1,7 @@
 import { Room } from '../types';
 import { mainMenu } from './mainMenu';
 import { sep12Sweden } from './sep12Sweden';
-import { cornStarch } from './cornStarch';
+import { bumble } from './bumble';
 import { npcOnCloseDoor } from './npcOnCloseDoor';
 import { abdallahFloor } from './abdallahFloor';
 import { rollerSkateDisco } from './rollerSkateDisco';
@@ -26,7 +26,7 @@ import { pinkWigEtc } from './pinkWigEtc';
 export const rooms: Record<string, Room> = {
   mainMenu,
   sep12Sweden,
-  cornStarch,
+  bumble,
   npcOnCloseDoor,
   abdallahFloor,
   rollerSkateDisco,
@@ -46,5 +46,5 @@ export const rooms: Record<string, Room> = {
   bikingBelgrade1hr,
   valentineCryGiftTradition,
   looksFakePhotoshop,
-  pinkWigEtc
+  pinkWigEtc,
 } as const;

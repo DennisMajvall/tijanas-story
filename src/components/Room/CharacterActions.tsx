@@ -1,4 +1,3 @@
-import React from 'react';
 import { Character } from '../../data/gameData';
 
 interface CharacterActionsProps {
@@ -6,12 +5,15 @@ interface CharacterActionsProps {
   onInitiateDialog: (characterId: string) => void;
 }
 
-export function CharacterActions({ characters, onInitiateDialog }: CharacterActionsProps) {
+export function CharacterActions({
+  characters,
+  onInitiateDialog,
+}: CharacterActionsProps) {
   if (!characters.length) return null;
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-3">Actions:</h2>
+      <h2 className="mb-3 text-xl font-semibold">Actions:</h2>
       <div className="grid grid-cols-2 gap-4">
         {characters.map((character) => (
           <button
@@ -19,7 +21,7 @@ export function CharacterActions({ characters, onInitiateDialog }: CharacterActi
             onClick={() => {
               onInitiateDialog(character.id);
             }}
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+            className="px-4 py-2 text-white transition-colors duration-200 rounded-lg bg-emerald-600 hover:bg-emerald-700"
           >
             Talk to {character.name}
           </button>
