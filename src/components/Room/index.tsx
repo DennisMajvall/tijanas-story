@@ -24,9 +24,7 @@ export function Room({
     charactersTalkedTo.filter((s) => s.split(':')[0] === room.id).length ===
     characters.length;
 
-  const background = room.background?.startsWith('#')
-    ? room.background
-    : `url(${room.background})`;
+  const background = getBackground(room.background);
 
   return (
     <div
@@ -61,3 +59,12 @@ export function Room({
     </div>
   );
 }
+
+const getBackground = (roomBackground: string) => {
+  if (roomBackground.startsWith('#') || roomBackground.startsWith('/')) {
+    return roomBackground;
+  } else if (roomBackground.startsWith('http')) {
+    return `url(${roomBackground})`;
+  }
+  return '';
+};
