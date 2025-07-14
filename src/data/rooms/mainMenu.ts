@@ -9,6 +9,6 @@ export const mainMenu: Room = {
   exits: {
     next: 'sep12Sweden',
   },
-  characters: ['mainMenuDennis', 'gardener'],
-  introCharacter: 'mainMenuDennis',
+  characters: ['mainMenuDennis'],
+  introCharacter: '',
 } as const;

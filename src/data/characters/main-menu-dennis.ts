@@ -9,12 +9,12 @@ export const mainMenuDennis: Character = {
       text: 'Welcome to this interactive journey!\nThis is a true story - your story.\n\nEach scene represents a real moment, a memory that actually happened, or well... somewhat, based on my memory!\n\nAre you ready to begin?',
       options: [
         {
-          text: 'Yes',
-          next: 'start_journey',
-        },
-        {
           text: 'Yes, but we both know your memory is what it is 🙄',
           next: 'bad_memory',
+        },
+        {
+          text: 'Yes',
+          next: 'start_journey',
         },
       ],
     },
