@@ -13,6 +13,7 @@ export interface Character {
   id: string;
   name: string;
   portrait: string;
+  hidden?: boolean;
   dialogues: {
     [key: string]: {
       text: string;

@@ -1,4 +1,5 @@
 import { Character } from '../data/gameData';
+import { useCountdownTrigger } from '../hooks/useCountdownTrigger';
 
 interface DialogProps {
   character: Character;
@@ -14,9 +15,24 @@ export function Dialog({
   onClose,
 }: DialogProps) {
   const dialog = character.dialogues[currentDialog];
+  console.log('character.dialogues', character.dialogues);
+
+  const { count, trigger } = useCountdownTrigger({
+    onCountdownEnd: () => {
+      character.dialogues['creativeNotAllowed'] =
+        character.dialogues['you_are_done'];
+    },
+  });
+
+  const onChoiceWrapper = (next: string) => {
+    if (next === 'part2') {
+      trigger();
+    }
+    onChoice(next);
+  };
 
   return (
-    <div className="fixed inset-0 flex items-end justify-center p-4 bg-black bg-opacity-50 sm:items-center">
+    <div className="fixed inset-0 flex items-end justify-center p-4 bg-black bg-opacity-65 sm:items-center">
       <div className="w-full max-w-2xl overflow-hidden text-white bg-gray-900 rounded-lg">
         <div className="flex items-start p-6">
           <img
@@ -32,17 +48,19 @@ export function Dialog({
               {dialog.options?.map((option, index) => (
                 <button
                   key={index}
-                  onClick={() => onChoice(option.next)}
-                  className="block w-full px-4 py-2 text-left transition-colors duration-200 bg-indigo-600 rounded hover:bg-indigo-700"
+                  disabled={count <= 0 && option.next === 'manualLabor'}
+                  onClick={() => onChoiceWrapper(option.next)}
+                  className="block w-full px-4 py-2 text-left whitespace-pre-line transition-colors duration-200 bg-indigo-600 rounded hover:bg-indigo-700 disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                   {option.text}
                 </button>
               ))}
               <button
                 onClick={onClose}
-                className="block w-full px-4 py-2 text-left transition-colors duration-200 bg-gray-600 rounded hover:bg-gray-700"
+                disabled={character.hidden}
+                className="block w-full px-4 py-2 text-left transition-colors duration-200 bg-gray-700 rounded hover:bg-gray-800"
               >
-                End conversation
+                End conversation abruptly
               </button>
             </div>
           </div>

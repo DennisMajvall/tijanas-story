@@ -52,6 +52,7 @@ function App() {
   const handleDialogChoice = (next: string) => {
     const [action, ...rest] = next.split(':');
     if (action === 'goToRoom') handleMove(rest.join(':'));
+    else if (action === 'talkTo') initiateDialog(rest.join(':'));
     else setCurrentDialog(next);
   };
 
