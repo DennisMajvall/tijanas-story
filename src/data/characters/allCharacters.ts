@@ -339,7 +339,7 @@ export const rollerInstructor: Character = {
       text: "Ah ah ah Stayin' Alive, stayin' Alive.\nOkay now everyone are you ready?!\n\nPut your feet like this, yeah yeah like that.\n Now we're going to make a big circle with our feet to move forward.",
       options: [
         {
-          text: "I can't do this.I'm afraid I will just crash into someone...\nI'm gonna chicken out.",
+          text: "I can't do this. I'm afraid I will just crash into someone...\nI'm gonna chicken out.",
           next: 'talkTo:dennisRollerSkate',
         },
       ],
@@ -432,7 +432,7 @@ export const dennisMomsit: Character = {
   portrait: '/images/dennis-face.jpg',
   dialogues: {
     greeting: {
-      text: "Oh that sure was something. Your mom is fun, she's like this Chinese tourist walking around with a camera hanging around their neck, taking pictures of and being astonished by everything, even the most unremarkable of things. I like her!",
+      text: "Oh that sure was something. Your mom is fun, she's like this Japanese tourist walking around with a camera hanging around their neck, taking pictures of and being astonished by everything, even the most unremarkable of things. I like her!",
       options: [
         {
           text: "She's intense! I can't take it any more! I'm so sorry for having you put up with her, I understand if you don't want to anymore.",
