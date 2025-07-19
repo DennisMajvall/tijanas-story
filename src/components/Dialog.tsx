@@ -36,7 +36,7 @@ export function Dialog({
       <div className="w-full max-w-2xl overflow-hidden text-white bg-gray-900 rounded-lg">
         <div className="flex items-start p-6">
           <img
-            src={character.portrait}
+            src={`${import.meta.env.BASE_URL}${character.portrait}`}
             alt={character.name}
             className="object-cover w-24 h-24 mr-6 rounded-full"
           />

@@ -94,10 +94,12 @@ export function Room({
 const getBackgroundImage = (roomBackground: string) => {
   if (roomBackground.startsWith('#')) {
     return ['backgroundColor', roomBackground];
-  } else if (
-    roomBackground.startsWith('http') ||
-    roomBackground.startsWith('/')
-  ) {
+  } else if (roomBackground.startsWith('/')) {
+    return [
+      'backgroundImage',
+      `url(${import.meta.env.BASE_URL}${roomBackground})`,
+    ];
+  } else if (roomBackground.startsWith('http')) {
     return ['backgroundImage', `url(${roomBackground})`];
   }
   return '';
