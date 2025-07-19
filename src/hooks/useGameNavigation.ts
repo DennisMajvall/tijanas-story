@@ -14,7 +14,7 @@ export function useGameNavigation() {
 
   // Update URL when room changes
   useEffect(() => {
-    const newPath = `/${currentRoom.id}`;
+    const newPath = `${import.meta.env.BASE_URL}${currentRoom.id}`;
     if (window.location.pathname !== newPath) {
       window.history.pushState({}, '', newPath);
     }
