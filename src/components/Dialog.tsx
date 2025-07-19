@@ -15,7 +15,6 @@ export function Dialog({
   onClose,
 }: DialogProps) {
   const dialog = character.dialogues[currentDialog];
-  console.log('character.dialogues', character.dialogues);
 
   const { count, trigger } = useCountdownTrigger({
     onCountdownEnd: () => {

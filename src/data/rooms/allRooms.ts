@@ -3,9 +3,8 @@ import { Room } from '../types';
 export const mainMenu: Room = {
   id: 'mainMenu',
   name: 'Welcome to Your Story',
-  description:
-    'A journey through memories, moments, and meaningful experiences.',
-  background: '/images/mainMenu.png',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'sep12Sweden',
   },
@@ -15,9 +14,8 @@ export const mainMenu: Room = {
 export const sep12Sweden: Room = {
   id: 'sep12Sweden',
   name: '12 Sep, Sweden',
-  description:
-    "Aahhhh, I've finally arrived!\n\nClean air, empty streets and a fun project ahead of me. This will be great!",
-  background: '/images/sep12Sweden.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'datingApps',
   },
@@ -26,9 +24,8 @@ export const sep12Sweden: Room = {
 export const datingApps: Room = {
   id: 'datingApps',
   name: 'Dating Apps',
-  description:
-    "Uuuugggggggggh I'm so tired of Serbian guys on dating apps. I really hope the selection here in Sweden will be better!",
-  background: '/images/datingApps.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'swipingNo',
   },
@@ -37,9 +34,8 @@ export const datingApps: Room = {
 export const swipingNo: Room = {
   id: 'swipingNo',
   name: 'Bumble',
-  description:
-    "Uuuugggggggggh I'm so tired of Serbian guys on dating apps. I really hope the selection here in Sweden will be better!",
-  background: '/images/datingApps.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'bumble',
   },
@@ -50,8 +46,8 @@ export const swipingNo: Room = {
 export const bumble: Room = {
   id: 'bumble',
   name: 'Bumble',
-  description: "Oh who's this guy? He looks cute.",
-  background: '/images/bumble.png',
+  description: '...',
+  background: '/images/transparent.png',
   characters: ['dennisBumbleProfile'],
   exits: {
     next: 'npcOnCloseDoor',
@@ -61,9 +57,8 @@ export const bumble: Room = {
 export const npcOnCloseDoor: Room = {
   id: 'npcOnCloseDoor',
   name: 'Is he an NPC?',
-  description:
-    "Dennis.. You're standing in the hallway and Tijana is about to leave for work.",
-  background: '/images/npcOnCloseDoor.png',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'npcOnCloseDoorPart2',
   },
@@ -73,9 +68,8 @@ export const npcOnCloseDoor: Room = {
 export const npcOnCloseDoorPart2: Room = {
   id: 'npcOnCloseDoorPart2',
   name: 'Is he an NPC?',
-  description:
-    'You swing the door back open.\nDennis is standing there in the exact same position.\n\nAha! I knew it!!!',
-  background: '/images/dennis-npc-door.jfif',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'abdallahFloor',
   },
@@ -85,8 +79,8 @@ export const npcOnCloseDoorPart2: Room = {
 export const abdallahFloor: Room = {
   id: 'abdallahFloor',
   name: "Abdallah's Place",
-  description: 'A friendly stranger invited you for dinner at his apartment...',
-  background: '/images/abdallahFloor.png',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'stpln',
   },
@@ -96,9 +90,8 @@ export const abdallahFloor: Room = {
 export const stpln: Room = {
   id: 'stpln',
   name: 'STPLN',
-  description:
-    'You arrive at the co-working space, ready to start your creative journey.',
-  background: '/images/stpln.jfif',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'applePicking',
   },
@@ -108,8 +101,8 @@ export const stpln: Room = {
 export const applePicking: Room = {
   id: 'applePicking',
   name: 'Communal Apple Picking',
-  description: 'You are at a communal apple picking ceremony.',
-  background: '/images/applePicking.png',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'rollerSkateDisco',
   },
@@ -119,9 +112,8 @@ export const applePicking: Room = {
 export const rollerSkateDisco: Room = {
   id: 'rollerSkateDisco',
   name: 'Roller Skate Disco',
-  description:
-    "You're at a roller skate disco with Dennis. The music is pumping, and an instructor is trying to get everyone started.",
-  background: '/images/rollerSkateDisco.png',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'meetFamily',
   },
@@ -131,9 +123,8 @@ export const rollerSkateDisco: Room = {
 export const meetFamily: Room = {
   id: 'meetFamily',
   name: 'Meeting the Family',
-  description:
-    "Tijana: This feels so wrong. I usually don't let my boyfriends meet my family.\nAt least not before a year or maybe even two.",
-  background: '/images/meetFamily.webp',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'motherVisiting',
   },
@@ -143,9 +134,8 @@ export const meetFamily: Room = {
 export const motherVisiting: Room = {
   id: 'motherVisiting',
   name: "Mom's Visit",
-  description:
-    "Your mother is visiting. She's a whirlwind of energy.\n\n'Hey Tijana, look at this!\nI'm over here.\nNow I'm here.\nNow here!\n\nHey are you coming? Keep up.",
-  background: '/images/motherVisiting.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'headphonesBalcony',
   },
@@ -155,9 +145,8 @@ export const motherVisiting: Room = {
 export const headphonesBalcony: Room = {
   id: 'headphonesBalcony',
   name: 'The Balcony Incident',
-  description:
-    "Aaahh!! OMG 😱 That did not just happen!! Wtf?!\nWtf am I gonna do?? Those were Dennis's headphones!\n\n*You race downstairs and frantically knock on the neighbour's door.*",
-  background: '/images/headphonesBalcony.png',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'madeInAbyssAnime',
   },
@@ -167,9 +156,8 @@ export const headphonesBalcony: Room = {
 export const madeInAbyssAnime: Room = {
   id: 'madeInAbyssAnime',
   name: 'Made in Abyss',
-  description:
-    'You and Dennis are watching the end of an episode of "Made in Abyss".\n\nOn screen: Mitty!! Nooooo! 😭',
-  background: '/images/madeInAbyssAnime.jpeg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'crossfitNov1',
   },
@@ -179,9 +167,8 @@ export const madeInAbyssAnime: Room = {
 export const crossfitNov1: Room = {
   id: 'crossfitNov1',
   name: 'Crossfit Hell',
-  description:
-    'Gasps for air.\nSweat flying everywhere.\nSurrounded by gym freaks.',
-  background: '/images/crossfitNov1.webp',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'arduino',
   },
@@ -195,9 +182,8 @@ export const crossfitNov1: Room = {
 export const arduino: Room = {
   id: 'arduino',
   name: 'Project: Robot',
-  description:
-    'Daddy? 😇💖\nCan we get an Arduino? Can we build a robot together? Beep boop 🤖\nPlease please please please! 😇',
-  background: '/images/arduino.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'alexDarkroom',
   },
@@ -207,8 +193,8 @@ export const arduino: Room = {
 export const alexDarkroom: Room = {
   id: 'alexDarkroom',
   name: 'KitKatClub',
-  description: 'Uhn Tiss Uhn Tiss Uhn Tiss 🎵🧡💛💚💜💙🖤🎵',
-  background: '/images/alexDarkroom.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'migrationsverket',
   },
@@ -218,9 +204,8 @@ export const alexDarkroom: Room = {
 export const migrationsverket: Room = {
   id: 'migrationsverket',
   name: 'Migrationsverket',
-  description:
-    'Hey, we were on your website and found some of the instructions unclear, could you help us with some of our questions?',
-  background: '/images/migrationsverket.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'manyFontsHome',
   },
@@ -230,9 +215,8 @@ export const migrationsverket: Room = {
 export const manyFontsHome: Room = {
   id: 'manyFontsHome',
   name: 'The Horrible Fonts',
-  description:
-    "What? You've never heard of AirBnB art? Really?\nHave you been living under a stone?",
-  background: '/images/manyFontsHome.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'valentineCryGiftTradition',
   },
@@ -242,8 +226,8 @@ export const manyFontsHome: Room = {
 export const valentineCryGiftTradition: Room = {
   id: 'valentineCryGiftTradition',
   name: "A Valentine's Tradition",
-  description: "Happy Valentine's!\n\n",
-  background: '/images/valentineCryGiftTradition.png',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'looksFakePhotoshop',
   },
@@ -258,9 +242,8 @@ export const valentineCryGiftTradition: Room = {
 export const looksFakePhotoshop: Room = {
   id: 'looksFakePhotoshop',
   name: 'The Ultimate Compliment',
-  description:
-    "Wow.\nI love your dick.\nIt's straight, it has the perfect size, perfect shape and all!\nIt kinda even looks fake, like it's been photoshopped!",
-  background: '/images/looksFakePhotoshop.png',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'pinkWigEtc',
   },
@@ -270,9 +253,8 @@ export const looksFakePhotoshop: Room = {
 export const pinkWigEtc: Room = {
   id: 'pinkWigEtc',
   name: 'The Pink Wig',
-  description:
-    "Oh! It's finally here! The pink wig and all.\n*You try it on.*\nDamn, I actually look good in this, wow, didn't think pink hair color would fit me that well 😮 I gotta show Dennis this!",
-  background: '/images/pinkWigEtc.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {
     next: 'theEnd',
   },
@@ -282,8 +264,7 @@ export const pinkWigEtc: Room = {
 export const theEnd: Room = {
   id: 'theEnd',
   name: 'The End',
-  description:
-    "That's it for now. I hope you liked my little story even though I had to rush the quality of the images a bit to finish it faster (sorry!)\n\nI love you super much Tijana and I'm so, so happy to have you in my life.\n\nI hope we can continue this story of ours together, for the rest of our lives.\nFull of adventures and fun times.\n\nForever yours! ❤️",
-  background: '/images/theEnd.jpg',
+  description: '...',
+  background: '/images/transparent.png',
   exits: {},
 } as const;
