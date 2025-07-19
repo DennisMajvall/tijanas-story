@@ -41,6 +41,7 @@ function App() {
     setCurrentDialog('');
     setActiveCharacter(null);
     navigateToRoom(nextRoomId);
+    document.title = `${gameData.rooms[nextRoomId].name} - Tijana's Story`;
   };
 
   const initiateDialog = (characterId: string) => {

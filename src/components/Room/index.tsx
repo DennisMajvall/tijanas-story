@@ -3,7 +3,6 @@ import { gameData } from '../../data/gameData';
 import { RoomHeader } from './RoomHeader';
 import { CharacterActions } from './CharacterActions';
 import { Navigation } from './Navigation';
-import { useCountdownTrigger } from '../../hooks/useCountdownTrigger';
 import { notIncludedScenes } from './notIncludedScenes';
 
 interface RoomProps {
